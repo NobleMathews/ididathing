@@ -27,8 +27,7 @@ class JavaScriptHandler:
         ret = subprocess.run(command, capture_output=True, shell=True, cwd=self.virtual_dir)
         data = json.loads(ret.stdout.decode())
         for dep, data in data["dependencies"].items():
-            if not dep.startswith("@"):
-                print(f"{dep}=={data['version']}")
+            print(f"{dep}=={data['version']}")
 
     def run(self):
         self.get_deps()

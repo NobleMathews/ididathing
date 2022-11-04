@@ -6,7 +6,7 @@ import tempfile
 
 
 # If $GOPATH is not specified, $HOME/go will be used by default
-class PythonHandler:
+class GoHandler:
     def __init__(self, test_package, virtual_dir=None):
         if virtual_dir is None:
             self.virtual_dir = tempfile.mkdtemp()
